@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-  pull-request:
-    branches:
-      - master
       
 jobs:
   deploy-heroku:
@@ -14,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "app-vulnerable2022" #Must be unique in Heroku
           heroku_email: "roxsrossve@gmail.com"
           remote_branch: "master"
           usedocker: true
+
+
