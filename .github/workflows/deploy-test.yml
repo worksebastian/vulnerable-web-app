@@ -10,8 +10,8 @@ jobs:
     name: Deploy Heroku
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout Repo
-        uses: actions/checkout@master
+      -name: Checkout_Repo
+        uses: actions/checkout@v4
       -name: Login Heroku
         run: heroku container:login
         env:
