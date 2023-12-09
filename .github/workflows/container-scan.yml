@@ -1,7 +1,8 @@
 name: container-scan
 on:
-  push:
-
+    push:
+      branches:
+        - master
 jobs:
   scan:
     runs-on: ubuntu-latest

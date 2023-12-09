@@ -1,6 +1,9 @@
-name: Horusec Scan
+name: SAST Horusec Scan
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   checking_code:
