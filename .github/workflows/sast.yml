@@ -1,4 +1,4 @@
-name: bot sast                                # workflow name
+name: SAST Gitguardin test                                # workflow name
 
 on: [push, pull_request]
 
