@@ -38,7 +38,7 @@ app.use(session({
 
 //This is our rendering engine
 //It can be used to demonstrate forms of xss
-app.engine('.html', exphbs({extname:'.html',partialsDir: __dirname +'/views',defaultLayout:"head"}));
+app.engine('.html', exphbs.engine({extname:'.html',partialsDir: __dirname +'/views',defaultLayout:"head"}));
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', '.html');
 
