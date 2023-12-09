@@ -5,12 +5,12 @@ on: [push]
 jobs:
   checking_code:
     runs-on: ubuntu-latest
-    name: Horusec Scan
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Run Horusec
-        id: run_horusec
-        uses: fike/horusec-action@v0.2.2
-        with:
-          arguments: -c=horusec-config.json -p ./
+        - name: Check out code
+          uses: actions/checkout@v3
+          with: # Required when commit authors is enabled
+            fetch-depth: 0
+        - name: Running Horusec Security
+          run: |
+            curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
+            horusec start -p="./" -e="true" -o="json" -O="./output.json"
