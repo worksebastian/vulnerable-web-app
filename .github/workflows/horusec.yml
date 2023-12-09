@@ -12,8 +12,8 @@ jobs:
             fetch-depth: 0
         - name: Running Horusec Security
           run: |
-            curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
-            horusec start -p="./" -e="true" -o="json" -O="./horusec.json"
+            curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest-beta
+            horusec start -p="./" -e="true" -D = "true" -o="json" -O="./horusec.json"
         - uses: actions/upload-artifact@v3
           with:
             name: horusec
