@@ -14,7 +14,7 @@ jobs:
           run: |
             curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
             horusec start -p="./" -e="true" -o="json" -O="./horusec.json"
-        - uses: action/upload=artifact@v3
+        - uses: actions/upload=artifact@v3
           with:
             name: horusec
             parth: horusec.json
