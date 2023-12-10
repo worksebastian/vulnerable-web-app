@@ -1,3 +1,4 @@
+name: ZAProxy test Full scan
 on: [push]
 
 jobs:
