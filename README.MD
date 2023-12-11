@@ -1,6 +1,7 @@
 # Una aplicación vulnerable para aplicar seguridad
 
 La app puede verse en https://spereznetto-654ddbcd1151.herokuapp.com/
+ZAproxy report   https://spereznetto-654ddbcd1151.herokuapp.com/zaproxy_report.html
 
 ### Cómo Desplegar aplicación Docker NodeJS en Heroku de forma local
 
